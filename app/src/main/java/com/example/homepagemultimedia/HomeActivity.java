@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     }
                     case 1:{
-                        frg = new Fragment();
+                        frg = new AboutFragment();
                         break;
                     }
                     case 2:{
