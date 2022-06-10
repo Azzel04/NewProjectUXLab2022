@@ -13,6 +13,7 @@
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -49,8 +50,8 @@
 
     <TextView
         android:id="@+id/rating"
-        android:layout_width="46dp"
-        android:layout_height="13dp"
+        android:layout_width="63dp"
+        android:layout_height="14dp"
         android:layout_marginStart="4dp"
         android:text="[Insert Rating]]"
         android:textColor="@color/black"
@@ -70,19 +71,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/PP"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="[Harga]"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
-        app:layout_constraintStart_toEndOf="@+id/gameName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/blue"/>
 
     <TextView
         android:id="@+id/judulDeveloper"
@@ -140,4 +128,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Developer" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="87dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:text="[Insert Harga]"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toEndOf="@+id/gameName"
+        app:layout_constraintTop_toBottomOf="@+id/upperline" />
 </androidx.constraintlayout.widget.ConstraintLayout>
