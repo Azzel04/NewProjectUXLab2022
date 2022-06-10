@@ -23,13 +23,13 @@ public class LogoutFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_logout, container, false);
-        Button toAbout = (Button) rootView.findViewById(R.id.buttonLogout);
+        Button toLogout = (Button) rootView.findViewById(R.id.buttonLogout);
 
-        toAbout.setOnClickListener(new View.OnClickListener() {
+        toLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentAbout = new Intent(getActivity(), MainActivity.class);
-                ((HomeActivity) getActivity()).startActivity(intentAbout);
+                Intent intentLogout = new Intent(getActivity(), MainActivity.class);
+                ((HomeActivity) getActivity()).startActivity(intentLogout);
             }
         });
 
