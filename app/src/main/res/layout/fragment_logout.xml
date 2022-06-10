@@ -21,11 +21,11 @@
         android:id="@+id/buttonLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log Out"
+        android:layout_marginLeft="145dp"
         android:layout_marginTop="300dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="145dp"
-        android:textSize="19dp"
-        />
+        android:backgroundTint="@color/blue"
+        android:text="Log Out"
+        android:textSize="19dp" />
 
 </FrameLayout>
