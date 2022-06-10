@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,17 +14,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button toHome = (Button)findViewById(R.id.loginButton);
-        toHome.setOnClickListener(new View.OnClickListener() {
+
+        EditText username = findViewById(R.id.usernameLogin);
+        EditText password = findViewById(R.id.passwordLogin);
+        Button loginButton = findViewById(R.id.loginButton);
+
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentAbout = new Intent(:MainActivity, AboutActivity.class);
-                ((HomeActivity) getActivity()).startActivity(intentAbout);
+                String name = username.getText().toString();
+                String pass = password.getText().toString();
+
+                if(name.length() < 3){
+                    username.setError("Nama harus lebih dari 3 karakter");
+                }
+                if(pass.isEmpty()){
+                    password.setError("Kata Sandi harus diisi");
+                }
             }
         });
     }
-    @Override
-    public void onClick(View view) {
 
-    }
+
+
 }
