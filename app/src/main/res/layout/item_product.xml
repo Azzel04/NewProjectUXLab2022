@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="185dp">
+    android:layout_height="300dp">
 
     <ImageView
         android:id="@+id/PP"
@@ -46,10 +46,10 @@
         android:textSize="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ratingImage"
         app:layout_constraintTop_toBottomOf="@+id/price"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <TextView
         android:id="@+id/gameName"
@@ -75,6 +75,30 @@
         android:textSize="10dp"
         app:layout_constraintStart_toEndOf="@+id/PP"
         app:layout_constraintTop_toBottomOf="@+id/judulRelease" />
+
+    <TextView
+        android:id="@+id/judulDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/PP"
+        app:layout_constraintTop_toBottomOf="@+id/judulRelease" />
+
+    <TextView
+        android:id="@+id/insertDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="[Insert Description]"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/PP"
+        app:layout_constraintTop_toBottomOf="@+id/judulDescription" />
 
     <TextView
         android:id="@+id/judulRelease"
@@ -114,10 +138,10 @@
         android:id="@+id/lowerline"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Developer" />
 
@@ -150,4 +174,5 @@
         app:layout_constraintTop_toBottomOf="@+id/gameType"
         app:layout_constraintVertical_bias="0.923"
         app:srcCompat="@drawable/star" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

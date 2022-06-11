@@ -9,6 +9,7 @@ public class Product {
     private String relDate;
     private String developerName;
     private String price;
+    private String description;
 //    private int pImage;
 //    public int getpImage() {
 //        return pImage;
@@ -20,13 +21,14 @@ public class Product {
 
 
 
-    public Product(String title, String rating, String type, String relDate, String developerName, String price) {
+    public Product(String title, String rating, String type, String relDate, String developerName, String price,String description) {
         this.title = title;
         this.rating = rating;
         this.type = type;
         this.relDate = relDate;
         this.developerName = developerName;
         this.price = price;
+        this.description=description;
 //        this.pImage = pImage;
     }
     public String getTitle() {
@@ -75,5 +77,12 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

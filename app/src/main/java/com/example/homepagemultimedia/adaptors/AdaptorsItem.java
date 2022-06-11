@@ -38,6 +38,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
         holder.rating.setText(prod.get(position).getRating());
         holder.relDate.setText(prod.get(position).getRelDate());
         holder.type.setText(prod.get(position).getType());
+        holder.description.setText(prod.get(position).getDescription());
 //        holder.type.set
     }
 
@@ -48,7 +49,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
     //viewholder
     //internal class
     static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView title,rating,type,relDate,developerName,price;
+        TextView title,rating,type,relDate,developerName,price,description;
         public MyViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             title= itemView.findViewById(R.id.gameName);
@@ -57,6 +58,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
             relDate= itemView.findViewById(R.id.releaseDate);
             developerName= itemView.findViewById(R.id.Developer);
             price= itemView.findViewById(R.id.price);
+            description= itemView.findViewById(R.id.insertDescription);
         }
     }
 }
