@@ -15,16 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/star"
-        android:layout_width="15dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/PP"
-        app:layout_constraintTop_toBottomOf="@+id/gameType"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/gameType"
         android:layout_width="wrap_content"
@@ -51,12 +41,15 @@
         android:id="@+id/rating"
         android:layout_width="63dp"
         android:layout_height="14dp"
-        android:layout_marginStart="4dp"
         android:text="[Insert Rating]]"
         android:textColor="@color/black"
         android:textSize="8dp"
-        app:layout_constraintStart_toEndOf="@+id/star"
-        app:layout_constraintTop_toTopOf="@+id/star" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toEndOf="@+id/ratingImage"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:layout_constraintVertical_bias="0.162" />
 
     <TextView
         android:id="@+id/gameName"
@@ -145,4 +138,16 @@
         app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toEndOf="@+id/gameName"
         app:layout_constraintTop_toBottomOf="@+id/upperline" />
+
+    <ImageView
+        android:id="@+id/ratingImage"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/PP"
+        app:layout_constraintTop_toBottomOf="@+id/gameType"
+        app:layout_constraintVertical_bias="0.923"
+        app:srcCompat="@drawable/star" />
 </androidx.constraintlayout.widget.ConstraintLayout>
