@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="200dp">
 
     <ImageView
         android:id="@+id/PP"
@@ -13,7 +13,6 @@
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:clickable="true"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -135,6 +134,8 @@
         android:layout_height="39dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/holo_blue_dark"
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
         android:gravity="center"
         android:text="[Insert Harga]"
         android:textAlignment="center"

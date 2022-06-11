@@ -9,6 +9,16 @@ public class Product {
     private String relDate;
     private String developerName;
     private String price;
+//    private int pImage;
+//    public int getpImage() {
+//        return pImage;
+//    }
+//
+//    public void setpImage(int pImage) {
+//        this.pImage = pImage;
+//    }
+
+
 
     public Product(String title, String rating, String type, String relDate, String developerName, String price) {
         this.title = title;
@@ -17,6 +27,7 @@ public class Product {
         this.relDate = relDate;
         this.developerName = developerName;
         this.price = price;
+//        this.pImage = pImage;
     }
     public String getTitle() {
         return title;

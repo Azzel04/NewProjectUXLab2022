@@ -38,6 +38,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
         holder.rating.setText(prod.get(position).getRating());
         holder.relDate.setText(prod.get(position).getRelDate());
         holder.type.setText(prod.get(position).getType());
+//        holder.type.set
     }
 
     @Override
