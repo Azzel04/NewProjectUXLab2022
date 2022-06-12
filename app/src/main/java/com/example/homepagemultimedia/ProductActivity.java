@@ -13,40 +13,75 @@ import java.util.ArrayList;
 
 public class ProductActivity extends AppCompatActivity {
 //    public static ArrayList<Product> prod = new ArrayList<>();
-    private RecyclerView recItem;
+    RecyclerView recItem;
+    RecyclerView.Adapter prodAdapter;
+    RecyclerView.LayoutManager layoutManager;
+
     String[] name = {
-            "Yakuza 0","Yakuza Kiwami","Yakuza Kiwami 2","Yakuza 3","Yakuza 4"
-    };
+            "Yakuza 0",
+            "Yakuza Kiwami",
+            "Yakuza Kiwami 2",
+            "Yakuza 3",
+            "Yakuza 4"};
     String[] rating = {
-            "5.0/5.0","5.0/5.0","5.0/5.0","5.0/5.0","5.0/5.0"
-    };
+            "5.0/5.0",
+            "5.0/5.0",
+            "5.0/5.0",
+            "5.0/5.0",
+            "5.0/5.0"};
     String[] type = {
-            "Actiom games","Actiom games","Actiom games","Actiom games","Actiom games"
+            "Action games",
+            "Action games",
+            "Action games",
+            "Action games",
+            "Action games"
     };
     String[] relDate = {
-            "August 1, 2018","Febuary 19, 2019","December 7, 2017","Febuary 26, 2009","March 18, 2010"
+            "August 1, 2018",
+            "February 19, 2019",
+            "December 7, 2017",
+            "February 26, 2009",
+            "March 18, 2010"
     };
     String[] developper = {
-            "SEGA","SEGA","SEGA","SEGA","SEGA"
+            "SEGA",
+            "SEGA",
+            "SEGA",
+            "SEGA",
+            "SEGA"
     };
     String[] harga = {
-            "Rp 20ribu","Rp 25ribu","Rp 30ribu","Rp 35ribu","Rp 40ribu"
+            "Rp 20ribu",
+            "Rp 25ribu",
+            "Rp 30ribu",
+            "Rp 35ribu",
+            "Rp 40ribu"
     };
     String[] description = {
-            "Mad Dog is Pure Boy!","Depression Version 1","Majima Construction is Best Job!",
-            "Okay, Okay Got It. No, There Is No Change In The Plan","Rp 40ribu","Lazy CEO of a Loaning Business is Somehow Bruce Lee"
+            "Mad Dog is Pure Boy!",
+            "Depression Version 1",
+            "Majima Construction is Best Job!",
+            "Okay, Okay Got It. No, There Is No Change In The Plan",
+            "Lazy CEO of a Loaning Business is Somehow Bruce Lee"
     };
-    int [] images={R.drawable.yakuza_zero_pp,R.drawable.kmw,R.drawable.kmw2,R.drawable.y3,R.drawable.y4};
-    private AdaptorsItem adaptor;
+    int [] images={
+            R.drawable.yakuza_zero_pp,
+            R.drawable.kmw,
+            R.drawable.kmw2,
+            R.drawable.y3,
+            R.drawable.y4
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 //        insertDummyData();
         recItem = findViewById(R.id.rItem);
-        recItem.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        adaptor = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description,images);
-        recItem.setAdapter(adaptor);
+        recItem.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        recItem.setLayoutManager(layoutManager);
+        prodAdapter = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description,images);
+        recItem.setAdapter(prodAdapter);
     }
 //    void insertDummyData(){
 //        prod.add(new Product("Yakuza 0","5.0/5.0","Actiom games","August 1, 2018",
