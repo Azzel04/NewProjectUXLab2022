@@ -21,7 +21,6 @@ public class ProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
         insertDummyData();
         recItem = findViewById(R.id.rItem);
-
         recItem.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         adaptor = new AdaptorsItem(prod);
         recItem.setAdapter(adaptor);

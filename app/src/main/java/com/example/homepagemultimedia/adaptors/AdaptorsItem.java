@@ -1,5 +1,7 @@
 package com.example.homepagemultimedia.adaptors;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.homepagemultimedia.DetailActivity;
+import com.example.homepagemultimedia.ProductActivity;
 import com.example.homepagemultimedia.R;
 import com.example.homepagemultimedia.models.Product;
 
@@ -17,11 +21,9 @@ import java.util.ArrayList;
 
 public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder>{
     private ArrayList<Product> prod;
-
     public AdaptorsItem(ArrayList<Product> prod){
         this.prod=prod;
     }
-
     @NonNull
     @NotNull
     @Override
