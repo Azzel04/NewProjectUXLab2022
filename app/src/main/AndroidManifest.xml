@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomePageMultimedia">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".UsernameActivity"></activity>
+        <activity android:name=".DetailActivity" />
         <activity android:name=".DetailActivity1" />
         <activity android:name=".ProductActivity" />
         <activity android:name=".HomeActivity" />
