@@ -11,6 +11,7 @@ public class Product {
     private String price;
     private String description;
 //    private int pImage;
+//
 //    public int getpImage() {
 //        return pImage;
 //    }
@@ -18,7 +19,6 @@ public class Product {
 //    public void setpImage(int pImage) {
 //        this.pImage = pImage;
 //    }
-
 
 
     public Product(String title, String rating, String type, String relDate, String developerName, String price,String description) {

@@ -22,10 +22,36 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder>{
-    private ArrayList<Product> prod;
-    public AdaptorsItem(ArrayList<Product> prod){
-        this.prod=prod;
+    Context context;
+    String[] name ;
+    String[] rating ;
+    String[] type ;
+    String[] relDate;
+    String[] developper;
+    String[] harga;
+    String[] description;
+    int [] images;
+    //    private  int[] images;
+//    private ArrayList<Product> prod;
+//    public AdaptorsItem(ArrayList<Product> prod,int[] images){
+//        this.prod=prod;
+//        this.images=images;
+//    }
+//
+//    public AdaptorsItem(ArrayList<Product> prod) {
+//    }
+    public AdaptorsItem(Context context, String[] name, String[] rating, String[] type, String[] relDate, String[] developper, String[] harga, String[] description, int[] images) {
+        this.context = context;
+        this.name = name;
+        this.rating = rating;
+        this.type = type;
+        this.relDate = relDate;
+        this.developper = developper;
+        this.harga = harga;
+        this.description = description;
+        this.images = images;
     }
+
     @NonNull
     @NotNull
     @Override
@@ -36,24 +62,25 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull AdaptorsItem.MyViewHolder holder, int position) {
-        holder.title.setText(prod.get(position).getTitle());
-        holder.developerName.setText(prod.get(position).getDeveloperName());
-        holder.price.setText(prod.get(position).getPrice());
-        holder.rating.setText(prod.get(position).getRating());
-        holder.relDate.setText(prod.get(position).getRelDate());
-        holder.type.setText(prod.get(position).getType());
-        holder.description.setText(prod.get(position).getDescription());
+        holder.title.setText(name[position]);
+        holder.developerName.setText(rating[position]);
+        holder.price.setText(type[position]);
+        holder.rating.setText(relDate[position]);
+        holder.relDate.setText(developper[position]);
+        holder.type.setText(harga[position]);
+        holder.description.setText(description[position]);
+        holder.image.setImageResource(images[position]);
 
 //        holder.type.set
     }
 
     @Override
     public int getItemCount() {
-        return prod.size();
+        return images.length;
     }
     //viewholder
     //internal class
-    static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title,rating,type,relDate,developerName,price,description;
         ImageView image;
         public MyViewHolder(@NonNull @NotNull View itemView) {
