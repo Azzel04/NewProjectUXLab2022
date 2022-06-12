@@ -2,9 +2,11 @@ package com.example.homepagemultimedia.adaptors;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +43,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
         holder.relDate.setText(prod.get(position).getRelDate());
         holder.type.setText(prod.get(position).getType());
         holder.description.setText(prod.get(position).getDescription());
+
 //        holder.type.set
     }
 
@@ -52,6 +55,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
     //internal class
     static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title,rating,type,relDate,developerName,price,description;
+        ImageView image;
         public MyViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             title= itemView.findViewById(R.id.gameName);
@@ -61,6 +65,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
             developerName= itemView.findViewById(R.id.Developer);
             price= itemView.findViewById(R.id.price);
             description= itemView.findViewById(R.id.insertDescription);
+            image = itemView.findViewById(R.id.ppImage);
         }
     }
 }

@@ -15,6 +15,7 @@ public class ProductActivity extends AppCompatActivity {
     public static ArrayList<Product> prod = new ArrayList<>();
     private RecyclerView recItem;
     private AdaptorsItem adaptor;
+    int [] images={R.drawable.yakuza_zero_pp};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,6 @@ public class ProductActivity extends AppCompatActivity {
         adaptor = new AdaptorsItem(prod);
         recItem.setAdapter(adaptor);
     }
-
     void insertDummyData(){
         prod.add(new Product("Yakuza 0","5.0/5.0","Actiom games","August 1, 2018",
                 "SEGA","Rp 20ribu","Mad Dog is Pure Boy!"));
