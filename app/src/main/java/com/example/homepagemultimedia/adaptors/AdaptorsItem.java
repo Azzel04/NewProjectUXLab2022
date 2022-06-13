@@ -41,23 +41,12 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
 //
 //    public AdaptorsItem(ArrayList<Product> prod) {
 //    }
+//    public AdaptorsItem(Context context, ArrayList<Product> prod) {
+//        this.context = context;
+//        this.prod = prod;
+//    }
     //viewholder
     //internal class
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView title,rating,type,relDate,developerName,price,description;
-        ImageView image;
-        public MyViewHolder(@NonNull @NotNull View itemView) {
-            super(itemView);
-            title= itemView.findViewById(R.id.gameName);
-            rating= itemView.findViewById(R.id.rating);
-            type= itemView.findViewById(R.id.gameType);
-            relDate= itemView.findViewById(R.id.releaseDate);
-            developerName= itemView.findViewById(R.id.Developer);
-            price= itemView.findViewById(R.id.price);
-            description= itemView.findViewById(R.id.insertDescription);
-            image = itemView.findViewById(R.id.ppImage);
-        }
-    }
 
     public AdaptorsItem(Context context, String[] name, String[] rating, String[] type, String[] relDate, String[] developper, String[] harga, String[] description, int[] images) {
         this.context = context;
@@ -72,8 +61,9 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
     }
 
     @NonNull
+    @NotNull
     @Override
-    public AdaptorsItem.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdaptorsItem.MyViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.item_product,parent,false);
         MyViewHolder viewHolder = new MyViewHolder(view);
@@ -90,13 +80,25 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
         holder.type.setText(type[position]);
         holder.description.setText(description[position]);
         holder.image.setImageResource(images[position]);
-
-//        holder.type.set
     }
-
 
     @Override
     public int getItemCount() {
         return name.length;
+    }
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        TextView title,rating,type,relDate,developerName,price,description;
+        ImageView image;
+        public MyViewHolder(@NonNull @NotNull View itemView) {
+            super(itemView);
+            title= itemView.findViewById(R.id.gameName);
+            rating= itemView.findViewById(R.id.rating);
+            type= itemView.findViewById(R.id.gameType);
+            relDate= itemView.findViewById(R.id.releaseDate);
+            developerName= itemView.findViewById(R.id.Developer);
+            price= itemView.findViewById(R.id.price);
+            description= itemView.findViewById(R.id.insertDescription);
+            image = itemView.findViewById(R.id.ppImage);
+        }
     }
 }
