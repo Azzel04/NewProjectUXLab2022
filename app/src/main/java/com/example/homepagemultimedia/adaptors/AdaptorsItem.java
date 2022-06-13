@@ -31,6 +31,22 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
     String[] harga;
     String[] description;
     int [] images;
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        TextView title,rating,type,relDate,developerName,price,description;
+        ImageView image;
+        public MyViewHolder(@NonNull @NotNull View itemView) {
+            super(itemView);
+            title= itemView.findViewById(R.id.gameName);
+            rating= itemView.findViewById(R.id.rating);
+            type= itemView.findViewById(R.id.gameType);
+            relDate= itemView.findViewById(R.id.releaseDate);
+            developerName= itemView.findViewById(R.id.Developer);
+            price= itemView.findViewById(R.id.price);
+            description= itemView.findViewById(R.id.insertDescription);
+            image = itemView.findViewById(R.id.ppImage);
+        }
+    }
     //    private  int[] images;
 //    private ArrayList<Product> prod;
 //    public AdaptorsItem(ArrayList<Product> prod,int[] images){
@@ -80,19 +96,5 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
     }
     //viewholder
     //internal class
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView title,rating,type,relDate,developerName,price,description;
-        ImageView image;
-        public MyViewHolder(@NonNull @NotNull View itemView) {
-            super(itemView);
-            title= itemView.findViewById(R.id.gameName);
-            rating= itemView.findViewById(R.id.rating);
-            type= itemView.findViewById(R.id.gameType);
-            relDate= itemView.findViewById(R.id.releaseDate);
-            developerName= itemView.findViewById(R.id.Developer);
-            price= itemView.findViewById(R.id.price);
-            description= itemView.findViewById(R.id.insertDescription);
-            image = itemView.findViewById(R.id.ppImage);
-        }
-    }
+
 }
