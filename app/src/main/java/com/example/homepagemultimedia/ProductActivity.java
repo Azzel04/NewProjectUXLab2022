@@ -1,13 +1,21 @@
 package com.example.homepagemultimedia;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.View;
 
 import com.example.homepagemultimedia.adaptors.AdaptorsItem;
 import com.example.homepagemultimedia.models.Product;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -69,7 +77,7 @@ public class ProductActivity extends AppCompatActivity {
             R.drawable.yk1,
             R.drawable.new_kmw2,
             R.drawable.new_y3,
-            R.drawable.new_y4
+            R.drawable.yakuza4pp
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +91,16 @@ public class ProductActivity extends AppCompatActivity {
         prodAdapter = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description,images);
 //        prodAdapter = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description);
         recItem.setAdapter(prodAdapter);
+        recItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toDetail = new Intent(ProductActivity.this,DetailActivity.class);
+                startActivity(toDetail);
+            }
+        });
     }
-//    void insertDummyData(){
+
+    //    void insertDummyData(){
 //        prod.add(new Product("Yakuza 0","5.0/5.0","Actiom games","August 1, 2018",
 //                "SEGA","Rp 20ribu","Mad Dog is Pure Boy!"));
 //        prod.add(new Product("Yakuza Kiwami","5.0/5.0","Action games","Febuary 19, 2019",

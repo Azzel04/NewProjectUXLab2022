@@ -19,34 +19,16 @@ public class DetailActivity extends AppCompatActivity {
         EditText qty = (EditText) findViewById(R.id.editTextNumber);
         Button confirmation = findViewById(R.id.buttonConfirm);
 
-
-//        confirmation.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(qty.getText().toString().length()<0){
-//                    qty.setError("Not enough quantity@");
-//                }else{
-////                    Toast.makeText(DetailActivity.this,DetailActivity.class)
-//                }
-//            }
-//        });
+        confirmation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(qty.getText().toString().length()<=0){
+                    qty.setError("Not Enough Quantity!");
+                }else{
+                    Toast.makeText(DetailActivity.this, "Success!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
-    private void collectIntent(){
-        if(getIntent().hasExtra("gameName") && getIntent().hasExtra("gameRating") && getIntent().hasExtra("gameType")
-        && getIntent().hasExtra("gameRelDate")&& getIntent().hasExtra("gameDeveloper")&& getIntent().hasExtra("gameHarga")&&
-        getIntent().hasExtra("gameDescription") && getIntent().hasExtra("gameImage")){
-            String gName = getIntent().getStringExtra("gameName");
-            String gRating = getIntent().getStringExtra("gameRating");
-            String gType = getIntent().getStringExtra("gameType");
-            String gRel = getIntent().getStringExtra("gameRelDate");
-            String gDev = getIntent().getStringExtra("gameDeveloper");
-            String gHarga = getIntent().getStringExtra("gameHarga");
-            String gDes = getIntent().getStringExtra("gameDescription");
-            int[] gImg = getIntent().getIntArrayExtra("gameImage");
-
-
-        }
-    }
-
 
 }

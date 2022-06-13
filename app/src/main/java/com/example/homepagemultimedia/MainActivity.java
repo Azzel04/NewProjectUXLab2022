@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Success!!", Toast.LENGTH_SHORT).show();
-//                    Intent toHomePage = new Intent(MainActivity.this,HomeActivity.class);
-//                    startActivity(toHomePage);
                     Intent goToPage = new Intent(MainActivity.this, UsernameActivity.class);
                     goToPage.putExtra("user",name);
                     startActivity(goToPage);
