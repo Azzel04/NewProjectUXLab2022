@@ -3,6 +3,7 @@ package com.example.homepagemultimedia.adaptors;
 import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,6 +81,17 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
         holder.type.setText(type[position]);
         holder.description.setText(description[position]);
         holder.image.setImageResource(images[position]);
+
+        Intent adaptorIntent = new Intent(context, DetailActivity.class);
+        adaptorIntent.putExtra("gameName",name);
+        adaptorIntent.putExtra("gameRating",rating);
+        adaptorIntent.putExtra("gameType",type);
+        adaptorIntent.putExtra("gameRelDate",relDate);
+        adaptorIntent.putExtra("gameDeveloper",developper);
+        adaptorIntent.putExtra("gameHarga",harga);
+        adaptorIntent.putExtra("gameDescription",description);
+        adaptorIntent.putExtra("gameImage",images);
+        context.startActivity(adaptorIntent);
     }
 
     @Override
