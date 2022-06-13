@@ -66,10 +66,10 @@ public class ProductActivity extends AppCompatActivity {
     };
     int [] images={
             R.drawable.yakuza_zero_pp,
-            R.drawable.kmw,
-            R.drawable.kmw2,
-            R.drawable.y3,
-            R.drawable.y4
+            R.drawable.yk1,
+            R.drawable.new_kmw2,
+            R.drawable.new_y3,
+            R.drawable.new_y4
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +81,7 @@ public class ProductActivity extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         recItem.setLayoutManager(layoutManager);
         prodAdapter = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description,images);
+//        prodAdapter = new AdaptorsItem(this,name,rating,type,relDate,developper,harga,description);
         recItem.setAdapter(prodAdapter);
     }
 //    void insertDummyData(){

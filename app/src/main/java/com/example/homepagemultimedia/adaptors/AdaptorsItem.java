@@ -98,7 +98,7 @@ public class AdaptorsItem extends RecyclerView.Adapter<AdaptorsItem.MyViewHolder
             developerName= itemView.findViewById(R.id.Developer);
             price= itemView.findViewById(R.id.price);
             description= itemView.findViewById(R.id.insertDescription);
-            image = itemView.findViewById(R.id.ppImage);
+            image = itemView.findViewById(R.id.PP);
         }
     }
 }
